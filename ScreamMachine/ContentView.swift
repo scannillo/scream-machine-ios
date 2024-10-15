@@ -9,37 +9,29 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(spacing: 20) {
-            Button{
-                Task { await Networking.sharedInstance.sendRequest() }
-            } label: {
-                Text("On/Off")
-                    .padding(10)
-                    .foregroundColor(.white)
-                    .background(.green)
-                    .cornerRadius(10)
-            }
-            
-            Button{
-                Task { await Networking.sharedInstance.sendRequest() }
-            } label: {
-                Text("Red Hue")
-                    .padding(10)
-                    .foregroundColor(.white)
-                    .background(.red)
-                    .cornerRadius(10)
-            }
-            
-            Button {
-                Task { await Networking.sharedInstance.sendRequest() }
-            } label: {
-                Text("Flicker")
-                    .padding(10)
-                    .foregroundColor(.white)
-                    .background(.gray)
-                    .cornerRadius(10)
-            }
+        VStack(spacing: 15) {
+            CustomButton(label: "On/Off", color: .green)
+            CustomButton(label: "Red Hue", color: .red)
+            CustomButton(label: "Flicker", color: .gray)
         }
+    }
+}
+
+struct CustomButton: View {
+    
+    let label: String
+    let color: Color
+    
+    var body: some View {
+        Button(label) {
+            print("!#")
+        }
+        .frame(maxWidth: .maximum(200, 0))
+        .font(.system(.title2))
+        .padding(10)
+        .background(color)
+        .foregroundColor(.white)
+        .clipShape(.buttonBorder)
     }
 }
 
