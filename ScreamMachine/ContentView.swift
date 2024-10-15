@@ -23,15 +23,16 @@ struct CustomButton: View {
     let color: Color
     
     var body: some View {
-        Button(label) {
-            print("!#")
+        Button {
+            print("123")
+        } label: {
+            Text(label)
+                .frame(maxWidth: .infinity)
         }
-        .frame(maxWidth: .maximum(200, 0))
-        .font(.system(.title2))
-        .padding(10)
-        .background(color)
-        .foregroundColor(.white)
-        .clipShape(.buttonBorder)
+        .buttonStyle(.borderedProminent)
+        .tint(color)
+        .padding(.leading, 20)
+        .padding(.trailing, 20)
     }
 }
 
