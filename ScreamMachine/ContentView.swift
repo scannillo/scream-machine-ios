@@ -9,40 +9,37 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
+        VStack(spacing: 20) {
             Button{
                 Task { await Networking.sharedInstance.sendRequest() }
             } label: {
-                Text("Eloise")
+                Text("On/Off")
                     .padding(10)
                     .foregroundColor(.white)
-                    .background(.black)
+                    .background(.green)
                     .cornerRadius(10)
             }
             
             Button{
                 Task { await Networking.sharedInstance.sendRequest() }
             } label: {
-                Text("Murphy")
+                Text("Red Hue")
                     .padding(10)
                     .foregroundColor(.white)
-                    .background(.brown)
+                    .background(.red)
                     .cornerRadius(10)
             }
             
             Button {
                 Task { await Networking.sharedInstance.sendRequest() }
             } label: {
-                Text("Banjo")
+                Text("Flicker")
                     .padding(10)
                     .foregroundColor(.white)
-                    .background(.orange)
+                    .background(.gray)
                     .cornerRadius(10)
             }
-
-
         }
-        .padding()
     }
 }
 
