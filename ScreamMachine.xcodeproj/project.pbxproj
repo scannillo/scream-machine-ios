@@ -12,6 +12,7 @@
 		8025AC462CBDDC0C00B294AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8025AC452CBDDC0C00B294AE /* Assets.xcassets */; };
 		8025AC492CBDDC0C00B294AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8025AC482CBDDC0C00B294AE /* Preview Assets.xcassets */; };
 		8025AC502CBDDC1D00B294AE /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8025AC4F2CBDDC1D00B294AE /* Networking.swift */; };
+		80D1F9782CC5EF8100D6FD92 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D1F9772CC5EF8100D6FD92 /* LoadingIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		8025AC452CBDDC0C00B294AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8025AC482CBDDC0C00B294AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8025AC4F2CBDDC1D00B294AE /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		80D1F9772CC5EF8100D6FD92 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				8025AC4F2CBDDC1D00B294AE /* Networking.swift */,
 				8025AC452CBDDC0C00B294AE /* Assets.xcassets */,
 				8025AC472CBDDC0C00B294AE /* Preview Content */,
+				80D1F9772CC5EF8100D6FD92 /* LoadingIndicator.swift */,
 			);
 			path = ScreamMachine;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80D1F9782CC5EF8100D6FD92 /* LoadingIndicator.swift in Sources */,
 				8025AC502CBDDC1D00B294AE /* Networking.swift in Sources */,
 				8025AC442CBDDC0A00B294AE /* ContentView.swift in Sources */,
 				8025AC422CBDDC0A00B294AE /* ScreamMachineApp.swift in Sources */,

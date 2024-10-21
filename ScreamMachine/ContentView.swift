@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isLoading = false
+    
     var body: some View {
-        VStack(spacing: 15) {
-            CustomButton(label: "On/Off", color: .green)
-            CustomButton(label: "Red Hue", color: .red)
-            CustomButton(label: "Flicker", color: .gray)
+        ZStack {
+            VStack(spacing: 15) {
+                CustomButton(label: "Red Room", color: .red, path: "horror_tease", isLoading: $isLoading)
+                CustomButton(label: "Reset", color: .gray, path: "reset", isLoading: $isLoading)
+            }
+            
+            if isLoading {
+                SpinnerView()
+            }
         }
     }
 }
@@ -21,10 +28,17 @@ struct CustomButton: View {
     
     let label: String
     let color: Color
+    let path: String
+    
+    @Binding var isLoading: Bool
     
     var body: some View {
         Button {
-            print("123")
+            isLoading = true
+            Task {
+                await Networking.sharedInstance.sendRequest(path)
+                isLoading = false
+            }
         } label: {
             Text(label)
                 .frame(maxWidth: .infinity)

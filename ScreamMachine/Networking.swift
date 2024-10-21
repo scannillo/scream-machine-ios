@@ -13,8 +13,8 @@ final class Networking {
     
     private init() { }
     
-    func sendRequest() async {
-        let urlRequest = URLRequest(url: URL(string: "http://127.0.0.1:5000")!)
+    func sendRequest(_ path: String) async {
+        let urlRequest = URLRequest(url: URL(string: "http://192.168.0.55:5000/\(path)")!)
         
         do {
             let (data, urlResponse) = try await URLSession.shared.data(for: urlRequest)
