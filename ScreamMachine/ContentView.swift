@@ -13,8 +13,10 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             VStack(spacing: 15) {
-                CustomButton(label: "Red Room", color: .red, path: "horror_tease", isLoading: $isLoading)
-                CustomButton(label: "Reset", color: .gray, path: "reset", isLoading: $isLoading)
+                CustomButton(label: "😈 Red: + Strobe", color: .red, path: "horror_tease", isLoading: $isLoading)
+                CustomButton(label: "🔪 Off: + Strobe", color: .orange, path: "murder_tease", isLoading: $isLoading)
+                CustomButton(label: "🍼 Red: - Strobe", color: .purple, path: "baby_tease", isLoading: $isLoading)
+                CustomButton(label: "♻️ Reset", color: .gray, path: "reset", isLoading: $isLoading)
             }
             
             if isLoading {
